@@ -18,12 +18,12 @@ namespace parcial.Controllers
         [HttpGet]
         public async Task<IActionResult> getEmpleado()
         {
-            return Ok(await _empleadoRepository.getEmpleado());
+            return Ok(await _empleadoRepository.Getempleado());
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> getEmpleadoById(int id)
         {
-            return Ok(await _empleadoRepository.getEmpleadoById(id));
+            return Ok(await _empleadoRepository.GetempleadoById(id));
         }
         [HttpPost]
         public async Task<IActionResult> InsertCliente([FromBody] empleado empleado)
@@ -36,7 +36,7 @@ namespace parcial.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var created = await _empleadoRepository.insertEmpleado(empleado);
+            var created = await _empleadoRepository.Insertempleado(empleado);
             return Ok(created);
         }
         [HttpPut]
@@ -50,13 +50,13 @@ namespace parcial.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var created = await _empleadoRepository.insertEmpleado(empleado);
+            var created = await _empleadoRepository.Insertempleado(empleado);
             return Ok(created);
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteClienteById(int id)
         {
-            return Ok(await _empleadoRepository.deleteEmpleado(id));
+            return Ok(await _empleadoRepository.Deleteempleado(id));
         }
     }
 }

@@ -21,7 +21,7 @@ namespace data.repositorio
         {
             return new MySqlConnection(_connection._connectionString);
         }
-        public async Task<bool> deleteEmpleado(int id)
+        public async Task<bool> Deleteempleado(int id)
         {
             var db = dbConnection();
             var sql = @"delete from empleado where idempleado=@id";
@@ -29,21 +29,21 @@ namespace data.repositorio
             return result > 0;
         }
 
-        public Task<empleado> getempleadoById(int id)
+        public Task<empleado> GetempleadoById(int id)
         {
             var db = dbConnection();
             var consulta = @"select * from empleado where idempleado=@Id";
             return db.QueryFirstOrDefaultAsync<empleado>(consulta, new { Id = id });
         }
 
-        public Task<IEnumerable<empleado>> getempleado()
+        public Task<IEnumerable<empleado>> Getempleado()
         {
             var db = dbConnection();
             var consulta = @"select * from empleado";
             return db.QueryAsync<empleado>(consulta);
         }
 
-        public async Task<bool> insertempleado(empleado empleado)
+        public async Task<bool> Insertempleado(empleado empleado)
         {
             var db = dbConnection();
             var sql = @"insert into empleado
@@ -61,7 +61,7 @@ namespace data.repositorio
             return result > 0;
         }
 
-        public async Task<bool> updateCliente(empleado empleado)
+        public async Task<bool> Updateempleado(empleado empleado)
         {
             var db = dbConnection();
             var sql = @"update empleado set
