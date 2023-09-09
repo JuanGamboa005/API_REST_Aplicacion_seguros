@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modelo
 {
-    internal class venta
+    public class venta
     {
     }
 }

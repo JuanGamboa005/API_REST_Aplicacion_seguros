@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace modelo
 {
-    internal class empleado
+    public class empleado
     {
+        public int idempleado { get; set; }
+        public int cc { get; set; }
+        public string nombre { get; set; }
+        public int edad { get; set; }
+        public string foto { get; set; }
+        public string telefono { get; set; }
     }
 }

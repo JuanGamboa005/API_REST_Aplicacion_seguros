@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modelo
 {
-    internal class cliente
+    public class cliente
     {
     }
 }
