@@ -26,7 +26,7 @@ namespace parcial.Controllers
             return Ok(await _empleadoRepository.GetempleadoById(id));
         }
         [HttpPost]
-        public async Task<IActionResult> InsertCliente([FromBody] empleado empleado)
+        public async Task<IActionResult> InsertEmpleado([FromBody] empleado empleado)
         {
             if (empleado == null)
             {
@@ -54,7 +54,7 @@ namespace parcial.Controllers
             return Ok(created);
         }
         [HttpDelete]
-        public async Task<IActionResult> DeleteClienteById(int id)
+        public async Task<IActionResult> DeleteEmpleadoById(int id)
         {
             return Ok(await _empleadoRepository.Deleteempleado(id));
         }
